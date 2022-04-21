@@ -34,11 +34,11 @@ public class Program {
 		System.out.println("Enter order data:");
 		System.out.print("Status: ");
 		sc.nextLine();
-		String status = sc.nextLine();
+		OrderStatus status = OrderStatus.valueOf(sc.next());
 		System.out.print("How many items to this order? ");
 		int n = sc.nextInt();
 
-		Order ord = new Order(new Date(), OrderStatus.valueOf(status), cli);
+		Order ord = new Order(new Date(), status, cli);
 
 		for (int i = 1; i <= n; i++) {
 
