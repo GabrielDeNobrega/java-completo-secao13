@@ -35,11 +35,12 @@ public class Program {
 		System.out.print("Status: ");
 		sc.nextLine();
 		OrderStatus status = OrderStatus.valueOf(sc.next());
+		
+		Order ord = new Order(new Date(), status, cli);
+		
 		System.out.print("How many items to this order? ");
 		int n = sc.nextInt();
-
-		Order ord = new Order(new Date(), status, cli);
-
+		
 		for (int i = 1; i <= n; i++) {
 
 			System.out.println("Enter #" + i + " item data:");
